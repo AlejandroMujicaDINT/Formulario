@@ -12,18 +12,18 @@
                    FontSize="40">
             Formulario
         </TextBlock>
-        <DockPanel DockPanel.Dock="Bottom">
-            <StackPanel DockPanel.Dock="Left" HorizontalAlignment="Left">
+        <DockPanel DockPanel.Dock="Bottom" LastChildFill="False">
+            <StackPanel DockPanel.Dock="Left" VerticalAlignment="Center">
                 <TextBlock Margin="5"
                            FontSize="20"
                            FontStyle="Italic">
                     Alejandro Mújica
                 </TextBlock>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                <Button Margin="10,10,5,10" Padding="30,5">Aceptar</Button>
+            <StackPanel Orientation="Horizontal" DockPanel.Dock="Right">
+                <Button Margin="10,10,5,10" Width="100">Aceptar</Button>
                 <Button Margin="0,10,10,10"
-                        Padding="30,5">Cancelar</Button>
+                        Width="100">Cancelar</Button>
             </StackPanel>
         </DockPanel>
         <Image Margin="10" DockPanel.Dock="Right" Source="images/foto.jpg"></Image>
@@ -35,37 +35,47 @@
                 <Border.Effect>
                     <DropShadowEffect />
                 </Border.Effect>
-                <StackPanel Background="LightBlue">
-                    <DockPanel Margin="10,10,5,0">
-                        <TextBlock DockPanel.Dock="Left"
-                                   Margin="5">Nombre</TextBlock>
-                        <Image DockPanel.Dock="Right" Source="images/info.png"
-                               Width="20"
-                               ToolTip="Máximo 100 caracteres"
-                               Margin="5,0"></Image>
-                        <TextBox Margin="5"></TextBox>
-                    </DockPanel>
-                    <DockPanel Margin="10,0,5,0">
-                        <TextBlock DockPanel.Dock="Left"
-                                   Margin="5">Edad</TextBlock>
-                        <Image DockPanel.Dock="Right"
-                               Margin="5,0"
-                               ToolTip="Número entre 0 y 100"
-                               Source="images/info.png"
-                               Width="20"></Image>
-                        <TextBox Margin="5"></TextBox>
-                    </DockPanel>
-                    <DockPanel Margin="10,0,5,10">
-                        <TextBlock DockPanel.Dock="Left"
-                                   Margin="5">Dirección</TextBlock>
-                        <Image DockPanel.Dock="Right"
-                               Margin="5,0"
-                               ToolTip="Incluir el código postal"
-                               Source="images/info.png"
-                               Width="20"></Image>
-                        <TextBox Margin="5"></TextBox>
-                    </DockPanel>
-                </StackPanel>
+                <Grid Background="LightBlue">
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="60"></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition Width="30"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Margin="5">Nombre</TextBlock>
+                    <TextBox Margin="5" Grid.Column="1"></TextBox>
+                    <Image DockPanel.Dock="Right"
+                           Source="images/info.png"
+                           Grid.Column="2"
+                           Width="20"
+                           ToolTip="Máximo 100 caracteres"
+                           Margin="5,0"></Image>
+                    <TextBlock Grid.Row="1" Margin="5">Edad</TextBlock>
+                    <TextBox Grid.Row="1"
+                             Grid.Column="1" 
+                             Margin="5"></TextBox>
+                    <Image Grid.Row="1"
+                           Grid.Column="2"
+                           Margin="5,0"
+                           ToolTip="Número entre 0 y 100"
+                           Source="images/info.png"
+                           Width="20"></Image>
+                    <TextBlock Grid.Row="2"
+                               Margin="5">Dirección</TextBlock>
+                    <TextBox Margin="5"
+                             Grid.Row="2"
+                             Grid.Column="1"></TextBox>
+                    <Image Grid.Row="2"
+                           Grid.Column="2"
+                           Margin="5,0"
+                           ToolTip="Incluir el código postal"
+                           Source="images/info.png"
+                           Width="20"></Image>
+                </Grid>
             </Border>
             <Border Margin="10"
                     BorderBrush="Black"
