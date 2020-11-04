@@ -4,6 +4,94 @@
              xmlns:local="clr-namespace:Formulario"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style TargetType="TextBlock"
+               x:Key="Top">
+            <Setter Property="DockPanel.Dock"
+                    Value="Top" />
+            <Setter Property="TextAlignment"
+                    Value="Center" />
+            <Setter Property="FontWeight"
+                    Value="Bold" />
+            <Setter Property="FontSize"
+                    Value="40" />
+        </Style>
+        <Style TargetType="DockPanel"
+               x:Key="Bottom">
+            <Setter Property="DockPanel.Dock"
+                    Value="Bottom" />
+            <Setter Property="LastChildFill"
+                    Value="False" />
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="Margin"
+                    Value="5" />
+        </Style>
+        <Style TargetType="TextBlock"
+               x:Key="TextBottom"
+               BasedOn="{StaticResource {x:Type TextBlock}}">
+            <Setter Property="DockPanel.Dock"
+                    Value="Left" />
+            <Setter Property="FontSize"
+                    Value="20" />
+            <Setter Property="FontStyle"
+                    Value="Italic" />
+        </Style>
+        <Style TargetType="StackPanel"
+               x:Key="StackBottom">
+            <Setter Property="Orientation"
+                    Value="Horizontal" />
+            <Setter Property="DockPanel.Dock"
+                    Value="Right" />
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Margin"
+                    Value="5" />
+            <Setter Property="Width"
+                    Value="100" />
+        </Style>
+        <Style TargetType="Image" x:Key="ImageRight">
+            <Setter Property="Margin"
+                    Value="10" />
+            <Setter Property="DockPanel.Dock"
+                    Value="Right" />
+        </Style>
+        <Style TargetType="Border" x:Key="Border">
+            <Setter Property="Margin"
+                    Value="10" />
+            <Setter Property="BorderBrush"
+                    Value="Black" />
+            <Setter Property="BorderThickness"
+                    Value="3" />
+            <Setter Property="CornerRadius"
+                    Value="3" />
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect />
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="Grid" x:Key="TopGrid">
+            <Setter Property="Background"
+                    Value="LightBlue" />
+        </Style>
+        <Style TargetType="Image">
+            <Setter Property="Margin"
+                    Value="5,0" />
+            <Setter Property="Width"
+                    Value="20" />
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Margin"
+                    Value="5" />
+        </Style>
+        <Style TargetType="GroupBox">
+            <Setter Property="Margin"
+                    Value="10" />
+        </Style>
+        <Style TargetType="StackPanel"
+               x:Key="GroupStack">
+            <Setter Property="Margin"
+                    Value="10,10,60,10" />
+        </Style>
     </Application.Resources>
 </Application>
